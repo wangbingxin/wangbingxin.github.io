@@ -56,16 +56,16 @@
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _login = __webpack_require__(14);
+	var _register = __webpack_require__(29);
 
-	var _login2 = _interopRequireDefault(_login);
+	var _register2 = _interopRequireDefault(_register);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	new _vue2.default(_header2.default);
 	//import "../common/screen.js";
 
-	new _vue2.default(_login2.default);
+	new _vue2.default(_register2.default);
 
 /***/ },
 /* 1 */
@@ -10897,123 +10897,11 @@
 	module.exports = " <!-- document.body.clientWidth -->\r\n\t\t<div class=\"header\"><a class=\"back\" @click=\"aaa\"></a>{{title}}<a href=\"\" class=\"home\"></a></div>\r\n\t";
 
 /***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(15)
-	__vue_script__ = __webpack_require__(17)
-	__vue_template__ = __webpack_require__(18)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
-	  if (!hotAPI.compatible) return
-	  var id = "E:\\login\\src\\components\\login.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 15 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(16);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4b337b37&file=login.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4b337b37&file=login.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 16 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(3)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\r\n\t\t.login .input{ overflow: hidden; margin-top: 1px; background: #fff; padding:8px 0; }\r\n\t\t.login .input span{ float: left; width: 15%; height: 36px; }\r\n\t\t.login .input span.account{ background: url(" + __webpack_require__(27) + ") no-repeat center center; background-size: 60%; }\r\n\t\t.login .input span.pwd{ background: url(" + __webpack_require__(28) + ") no-repeat center center; background-size: 60%; }\r\n\t\t.login .input input{ float: left; width: 80%; height: 36px; margin-left: 2%; line-height: 36px; font-size: 18px; color: #999; }\r\n\t\t.login .btn{ text-align: center; margin-top: 30px; }\r\n\t\t.login .btn a{ display: inline-block; width: 80%; height: 44px; line-height: 44px; color: #fff; background: #644b3f; text-align: center; border-radius: 5px; }\r\n\t\t.login .err_msg{ color: #dd4b39; text-align: center; margin-top: 10px; }\r\n\t\t.login p{ text-align: center; margin-top: 20px; }\r\n\t\t.login p a{ color: #b2b2b2; text-decoration: underline; }\r\n\t", ""]);
-
-	// exports
-
-
-/***/ },
-/* 17 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	//
-	// 	<template>
-	// 		<div class="login">
-	// 			<fastlogin></fastlogin>
-	// 			<div class="input">
-	// 				<span class="account"></span>
-	// 				<input type="text" placeholder="请输入手机号或邮箱">
-	// 			</div>
-	// 			<div class="input">
-	// 				<span class="pwd"></span>
-	// 				<input type="password" placeholder="请输入密码">
-	// 			</div>
-	// 			<div class="err_msg"></div>
-	// 			<div class="btn"><a>立即登录</a></div>
-	// 			<p>没有账号？ <a href="#">立即注册</a></p>
-	// 		</div>
-	// 	</template>
-	// 	<style>
-	// 		.login .input{ overflow: hidden; margin-top: 1px; background: #fff; padding:8px 0; }
-	// 		.login .input span{ float: left; width: 15%; height: 36px; }
-	// 		.login .input span.account{ background: url(../imgs/ic_user.png) no-repeat center center; background-size: 60%; }
-	// 		.login .input span.pwd{ background: url(../imgs/ic_psd.png) no-repeat center center; background-size: 60%; }
-	// 		.login .input input{ float: left; width: 80%; height: 36px; margin-left: 2%; line-height: 36px; font-size: 18px; color: #999; }
-	// 		.login .btn{ text-align: center; margin-top: 30px; }
-	// 		.login .btn a{ display: inline-block; width: 80%; height: 44px; line-height: 44px; color: #fff; background: #644b3f; text-align: center; border-radius: 5px; }
-	// 		.login .err_msg{ color: #dd4b39; text-align: center; margin-top: 10px; }
-	// 		.login p{ text-align: center; margin-top: 20px; }
-	// 		.login p a{ color: #b2b2b2; text-decoration: underline; }
-	// 	</style>
-	// 	<script>
-	var FastLogin = __webpack_require__(19);
-	exports.default = {
-		el: "#login_container",
-		components: {
-			fastlogin: FastLogin
-		}
-	};
-	// </script>
-
-/***/ },
-/* 18 */
-/***/ function(module, exports) {
-
-	module.exports = "\r\n\t\t<div class=\"login\">\r\n\t\t\t<fastlogin></fastlogin>\r\n\t\t\t<div class=\"input\">\r\n\t\t\t\t<span class=\"account\"></span>\r\n\t\t\t\t<input type=\"text\" placeholder=\"请输入手机号或邮箱\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"input\">\r\n\t\t\t\t<span class=\"pwd\"></span>\r\n\t\t\t\t<input type=\"password\" placeholder=\"请输入密码\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"err_msg\"></div>\r\n\t\t\t<div class=\"btn\"><a>立即登录</a></div>\r\n\t\t\t<p>没有账号？ <a href=\"#\">立即注册</a></p>\r\n\t\t</div>\r\n\t";
-
-/***/ },
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
 /* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -11154,6 +11042,146 @@
 /***/ function(module, exports) {
 
 	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEMkUwMEVENjk0MTcxMUU2QjJERkE4NzM2MDdGOTdDRiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEMkUwMEVENzk0MTcxMUU2QjJERkE4NzM2MDdGOTdDRiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQyRTAwRUQ0OTQxNzExRTZCMkRGQTg3MzYwN0Y5N0NGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQyRTAwRUQ1OTQxNzExRTZCMkRGQTg3MzYwN0Y5N0NGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+6zPMVAAABpNJREFUeNrsXHloHFUc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"
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(30)
+	__vue_script__ = __webpack_require__(32)
+	__vue_template__ = __webpack_require__(33)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) { (typeof module.exports === "function" ? module.exports.options : module.exports).template = __vue_template__ }
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "E:\\login\\src\\components\\register.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(31);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0b7e8376&file=register.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./register.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0b7e8376&file=register.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./register.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\r\n\t\t.register .input{ overflow: hidden; margin-top: 1px; background: #fff; }\r\n\t\t.register .input span{ float: left; width: 15%; height: 50px; }\r\n\t\t .register .input span.ic_account{ background: url(" + __webpack_require__(27) + ") no-repeat center center; background-size: 60%; }\r\n\t\t.register .input span.ic_pwd{ background: url(" + __webpack_require__(28) + ") no-repeat center center; background-size: 60%; }\r\n\t\t.register .input span.ic_code{ background: url(" + __webpack_require__(34) + ") no-repeat center center; background-size: 60%; } \r\n\t\t.register .input input{ float: left; width: 80%; height: 34px; margin-left: 2%; padding: 10px 0; font-size: 18px; color: #999; }\r\n\t\t.register .input input.ip_code{ width: 45%; margin-right: 5%; }\r\n\t\t.register .input span.code{ width: 30%; height: 44px; margin-top: 5px; background: #e6e6e6; }\r\n\t\t.register .agreement{ overflow: hidden; }\r\n\t\t.register .agreement a{ color: #f39c12; float: right; }\r\n\t\t.register .btn{ text-align: center; margin-top: 30px; }\r\n\t\t.register .btn a{ display: inline-block; width: 80%; height: 44px; line-height: 44px; color: #fff; background: #644b3f; text-align: center; border-radius: 5px; }\r\n\t\t.register .err_msg{ color: #dd4b39; text-align: center; margin-top: 10px; }\r\n\t\t.register p{ text-align: center; margin-top: 20px; }\r\n\t\t.register p a{ color: #b2b2b2; text-decoration: underline; }\r\n\t", ""]);
+
+	// exports
+
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	// 	<template>
+	// 		<div class="register">
+	// 			<fastlogin></fastlogin>
+	// 			<div class="input">
+	// 				<span class="ic_account"></span>
+	// 				<input type="text" placeholder="请输入手机号或邮箱">
+	// 			</div>
+	// 			<div class="input">
+	// 				<span class="ic_pwd"></span>
+	// 				<input type="password" placeholder="请输入密码">
+	// 			</div>
+	// 			<div class="input">
+	// 				<span class="ic_pwd"></span>
+	// 				<input type="password" placeholder="请再次输入密码">
+	// 			</div>
+	// 			<div class="input">
+	// 				<span class="ic_code"></span>
+	// 				<input class="ip_code" type="text" placeholder="请输入验证码">
+	// 				<span class="code"></span>
+	// 			</div>
+	// 			<div class="err_msg"></div>
+	// 			<div class="agreement">
+	// 				<label><input type="checkbox" checked>我已阅读并同意</label><a href="#">《阅路小说网用户协议》</a>
+	// 			</div>
+	// 			<div class="btn"><a>立即注册</a></div>
+	// 			<p>已有账号？ <a href="#">立即登录</a></p>
+	// 		<div>
+	// 	</template>
+	// 	<style>
+	// 		.register .input{ overflow: hidden; margin-top: 1px; background: #fff; }
+	// 		.register .input span{ float: left; width: 15%; height: 50px; }
+	// 		 .register .input span.ic_account{ background: url(../imgs/ic_user.png) no-repeat center center; background-size: 60%; }
+	// 		.register .input span.ic_pwd{ background: url(../imgs/ic_psd.png) no-repeat center center; background-size: 60%; }
+	// 		.register .input span.ic_code{ background: url(../imgs/ic_code.png) no-repeat center center; background-size: 60%; } 
+	// 		.register .input input{ float: left; width: 80%; height: 34px; margin-left: 2%; padding: 10px 0; font-size: 18px; color: #999; }
+	// 		.register .input input.ip_code{ width: 45%; margin-right: 5%; }
+	// 		.register .input span.code{ width: 30%; height: 44px; margin-top: 5px; background: #e6e6e6; }
+	// 		.register .agreement{ overflow: hidden; }
+	// 		.register .agreement a{ color: #f39c12; float: right; }
+	// 		.register .btn{ text-align: center; margin-top: 30px; }
+	// 		.register .btn a{ display: inline-block; width: 80%; height: 44px; line-height: 44px; color: #fff; background: #644b3f; text-align: center; border-radius: 5px; }
+	// 		.register .err_msg{ color: #dd4b39; text-align: center; margin-top: 10px; }
+	// 		.register p{ text-align: center; margin-top: 20px; }
+	// 		.register p a{ color: #b2b2b2; text-decoration: underline; }
+	// 	</style>
+	// 	<script>
+	var FastLogin = __webpack_require__(19);
+	exports.default = {
+		el: "#register_container",
+		components: {
+			fastlogin: FastLogin
+		}
+	};
+	// </script>
+	//
+
+/***/ },
+/* 33 */
+/***/ function(module, exports) {
+
+	module.exports = "\r\n\t\t<div class=\"register\">\r\n\t\t\t<fastlogin></fastlogin>\r\n\t\t\t<div class=\"input\">\r\n\t\t\t\t<span class=\"ic_account\"></span>\r\n\t\t\t\t<input type=\"text\" placeholder=\"请输入手机号或邮箱\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"input\">\r\n\t\t\t\t<span class=\"ic_pwd\"></span>\r\n\t\t\t\t<input type=\"password\" placeholder=\"请输入密码\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"input\">\r\n\t\t\t\t<span class=\"ic_pwd\"></span>\r\n\t\t\t\t<input type=\"password\" placeholder=\"请再次输入密码\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"input\">\r\n\t\t\t\t<span class=\"ic_code\"></span>\r\n\t\t\t\t<input class=\"ip_code\" type=\"text\" placeholder=\"请输入验证码\">\r\n\t\t\t\t<span class=\"code\"></span>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"err_msg\"></div>\r\n\t\t\t<div class=\"agreement\">\r\n\t\t\t\t<label><input type=\"checkbox\" checked>我已阅读并同意</label><a href=\"#\">《阅路小说网用户协议》</a>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"btn\"><a>立即注册</a></div>\r\n\t\t\t<p>已有账号？ <a href=\"#\">立即登录</a></p>\r\n\t\t<div>\r\n\t</template>";
+
+/***/ },
+/* 34 */
+/***/ function(module, exports) {
+
+	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4Qzg4NzAzRTk0MjExMUU2QUFGNUIxQUE2RjlCOTRCQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4Qzg4NzAzRjk0MjExMUU2QUFGNUIxQUE2RjlCOTRCQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjhDODg3MDNDOTQyMTExRTZBQUY1QjFBQTZGOUI5NEJDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjhDODg3MDNEOTQyMTExRTZBQUY1QjFBQTZGOUI5NEJDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+6GHowAAAAThJREFUeNrs3MENgjAABVAxbsQVF5EJnIgJdBHxyEy1B0yIxyrUlveTxhsJL631N6ZNCOEg6TkiAAgQ4I5z+vYB0zQVDdC2rRloCRecJvV3YFy6l/hxjaMr3GCMY4hL+b4Z4Ix3q2wy9SmIqUv4WuFqTHqn1F24W+xiTclqcTWFz3eyidiFAQIUgAABAhSAK+e05sP/5azw2zO/3DPwEUfINB41LOGcx11dDYBjRsBn0d+Bc852YQEIECBAAQhwl4CqnCqnyqlyNhGAAhAgQIACUJVT5VQ5VU6Vs4kABCgAAQIECFCVU+VUOVVur1VuVcA1/x1vFwYoAAECBAhQAALcYRMZ30V9cfNP6Rm3nIFDhZNp2AxwvuWsP+Q9afnlzOs3vf5uGVeACsCcaVwFbwYCBAhQUvMSYACbzrsuXjv9bwAAAABJRU5ErkJggg=="
 
 /***/ }
 /******/ ]);
