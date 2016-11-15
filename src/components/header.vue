@@ -1,20 +1,18 @@
-	<script>
-		export default{
-			el:"#header-container",
-			props:["title"],
-			methods:{
-				aaa(){
-					console.log(document.body.clientWidth);
-				}
-			}
-		}
-	</script>
-	<template> <!-- document.body.clientWidth -->
-		<div class="header"><a class="back" @click="aaa"></a>{{title}}<a href="" class="home"></a></div>
-	</template>
-	<style>
-		.header{ background: #644b3f; overflow: hidden; text-align: center; line-height: 50px; font-size: 20px; color: #fff; }
-		.header a{ width: 12%; height: 50px; background-size: 50%; top: center; }
-		.header .back{ float: left; background: url("../imgs/back.png") no-repeat center center; background-size: 72%; }
-		.header .home{ float: right; background: url("../imgs/home.png") no-repeat center center; background-size: 72%; }
-	</style>
+<style>
+	.header header{ height: .9rem; background: #644b3f; }
+</style>
+<template>
+	<div class="header">
+		<header>
+			<div class="logo"></div>
+			<div class="login"></div>
+		</header>
+		<nav>
+			<router-link to="/library">书库</router-link>
+			<router-link to="/rank">排行</router-link>
+			<router-link to="/complete">全本</router-link>
+			<router-link to="/recharge">充值</router-link>
+			<router-link to="/bookshelf">书架</router-link>
+		</nav>
+	</div>
+</template>

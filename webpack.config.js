@@ -1,15 +1,11 @@
-var path=require("path");
-var ExtractTextPlugin=require("extract-text-webpack-plugin");
+const path=require("path");
+const ExtractTextPlugin=require("extract-text-webpack-plugin");
 
 module.exports={
-	entry:{
-		"LoginBundle/Login":"./src/Login/app.js",
-		"RegisterBundle/Register":"./src/Register/app.js"
-	},
+	entry:"./src/entry.js",
 	output:{
 		path:path.join(__dirname,"./web/build"),
-		filename:"[name].bundle.js",
-		publicPath:"build"
+		filename:"app.bundle.js"
 	},
 	module:{
 		loaders:[
@@ -24,22 +20,19 @@ module.exports={
 			{
 				test:/\.js$/,
 				exclude:/node_modules/,
-				loader:"babel-loader",
+				loader:"babel",
 				query:{
 					"presets":["latest"]
-				}
-			},
-			{
-				test:/\.png|jpg/,
-				loader:"url-loader",
-				query:{
-					limit:8192,
-					name:"imgs/[name].[ext]"
 				}
 			}
 		]
 	},
+	resolve:{
+		alias:{
+			"vue":"vue/dist/vue.js"
+		}
+	},
 	plugins:[
-		new ExtractTextPlugin("[name].bundle.css")
+		new ExtractTextPlugin("app.bundle.css")
 	]
 }
